@@ -5,12 +5,11 @@ from audio_recorder_streamlit import audio_recorder
 import google.generativeai as genai
 import azure.cognitiveservices.speech as speechsdk
 import base64
-from dotenv import load_dotenv
 
 # --- API Keys ---
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-AZURE_TTS_KEY = os.getenv("AZURE_TTS_KEY")
-AZURE_TTS_REGION = os.getenv("AZURE_TTS_REGION")
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+AZURE_TTS_KEY = st.secrets["AZURE_TTS_KEY"]
+AZURE_TTS_REGION = st.secrets["AZURE_TTS_REGION"]
 
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash")
