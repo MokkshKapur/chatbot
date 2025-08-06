@@ -1,0 +1,35 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environment folders
+.venv/
+env/
+venv/
+ENV/
+
+# VSCode/IDE config (optional)
+.vscode/
+.idea/
+
+# Secret environment file
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Streamlit specific
+.streamlit/*.toml
+!/.streamlit/config.toml  # keep config.toml but ignore others
+
+# Logs or temporary audio files
+*.log
+*.mp3
+*.wav
+*.tmp
